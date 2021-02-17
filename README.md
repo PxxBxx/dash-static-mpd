@@ -18,16 +18,17 @@ Works only in DASH for now (HLS incoming)
 ## Sample Scripts
 * test-atomic-mpd-to-static.php
 Use some collections of MPD files to generate static manifests
+```
+Usage: php test-atomic-to-static.php <payload label>
 
-## Sample input and output
+Available payload labels :
+	* HLSClear
+	* HLSDRM
+	* DASHClear
+	* DASHDRM
+	* DASHDRMSimpleTrack
+	* HLSDRMSimpleTrack
+```
 
-### DASH : Multiple `.ism` => Static `.mpd` with multiple DRM keys (ContentProtection in Representation)
-
-
-### DASH : Multiple `.ism` => Static `.mpd` with single DRM key (ContentProtection in AdaptationSet)
-
-
-### HLS : Multiple `.ism` => Static `.m3u8` with multiple DRM keys
-
-
-### HLS : Multiple `.ism` => Static `.m3u8` with single DRM key
+Just launch the script using an available label, and it will output the content for the static manifests.
+_(If you want to check the URLs of the sources, they are listed in the test script)_
