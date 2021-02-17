@@ -1,24 +1,24 @@
 # dash-static-mpd
 Project to build static MPD manifests referencing external sources
 
-* DevelopMpd.class.php
+* `DevelopMpd.class.php`
 Class to develop/factorize Nodes inside a MPD structure
 
-* MultipleVideoAdaptationSet.php
+* `MultipleVideoAdaptationSet.php`
 Explode video Representation into multiple AdaptationSet, and link them (DASH stream-set-switching)
 
-* StaticGenerator.class.php
+* `StaticGenerator.class.php`
 Class to generate a static MPD based on SD+HD distinct MPD files
 Works on DASH __and__ HLS
 
-* StaticGeneratorAtomic.class.php
+* `StaticGeneratorAtomic.class.php`
 Class to generate a static MPD based on _one MPD per elementary stream (video, audio, text)_
 Works only in DASH for now (HLS incoming)
 
-* StaticGeneratorAtomicHLS.class.php
+* `StaticGeneratorAtomicHLS.class.php`
 Generator for HLS, used by `StaticGeneratorAtomic.class.php`
 
-* StaticGeneratorAtomicDASH.class.php
+* `StaticGeneratorAtomicDASH.class.php`
 Generator for DASH, used by `StaticGeneratorAtomic.class.php`
 
 ## Sample Scripts
