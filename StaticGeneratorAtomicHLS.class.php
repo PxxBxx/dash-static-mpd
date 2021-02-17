@@ -67,10 +67,12 @@ class StaticGeneratorAtomicHLS {
         // TEXT
         foreach ($m3u8s['text'] as $idx => $text) {
             $textLine = $text->groupLine . ',URI="' . $text->uri . '"';
-            // remove ,DEFAULT=YES
-            $textLine = str_replace(',DEFAULT=YES','',$textLine);
-            // ensure ,AUTOSELECT=NO
-            $textLine = str_replace(',AUTOSELECT=YES',',AUTOSELECT=NO',$textLine);
+            if ($idx > 0) {
+                // remove ,DEFAULT=YES for tracks > 0
+                $textLine = str_replace(',DEFAULT=YES','',$textLine);
+            }
+            // ensure ,AUTOSELECT=NO <---- NOPE ! I would love to, but current production has them at YES :'(
+            //$textLine = str_replace(',AUTOSELECT=YES',',AUTOSELECT=NO',$textLine);
 
             $staticManifest['subs'][] = $textLine;
         }
