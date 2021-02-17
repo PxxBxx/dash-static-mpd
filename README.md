@@ -15,6 +15,12 @@ Works on DASH __and__ HLS
 Class to generate a static MPD based on _one MPD per elementary stream (video, audio, text)_
 Works only in DASH for now (HLS incoming)
 
+* StaticGeneratorAtomicHLS.class.php
+Generator for HLS, used by `StaticGeneratorAtomic.class.php`
+
+* StaticGeneratorAtomicDASH.class.php
+Generator for DASH, used by `StaticGeneratorAtomic.class.php`
+
 ## Sample Scripts
 * test-atomic-mpd-to-static.php
 Use some collections of MPD files to generate static manifests
